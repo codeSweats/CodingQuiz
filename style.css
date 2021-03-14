@@ -1,0 +1,11 @@
+.high-scores {
+    position:absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.countdown-timer {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}

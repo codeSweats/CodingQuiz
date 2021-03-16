@@ -12,5 +12,50 @@
 
 .start-page {
     text-align: center;
+
+}
+
+.multiple-choice {
+    display: block;
+
+}
+
+.button {
+    display: inline-block;
+    font-size: 100;
+    background-color: brown;
+    cursor: pointer;
+    margin: 7px;
+    border-radius: 7px;
+    padding: 3px 10px;
+    color: white;
+    border: 0;
+    transition: background-color 0.1s;
+}
+
+.button :hover {
+    background-color: yellow;
+
+}
+
+.body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+
+}
+
+a {
+    color: wheat;
+    text-decoration: none;
+    transition: color .1s;
+
+}
+
+a:hover {
+    color: turquoise;
+}
+
+.hidden {
+    display: none;
     
 }

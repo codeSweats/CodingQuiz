@@ -57,5 +57,14 @@ a:hover {
 
 .hidden {
     display: none;
-    
+
+}
+
+.quiz-results {
+    font-size: 125%;
+    font-style: italic;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: teal;
+    border-top: 2px solid brown;
 }

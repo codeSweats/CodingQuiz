@@ -32,9 +32,9 @@ let questions = [
 ];
 
 // Some of the global variables
-let questionIndex = ;
+let questionIndex = 0;
 let gameTime = 100;
-let timerId = ;
+let timerId = 0;
 let startBtn = document.querySelector("#start-button");
 
 
@@ -45,28 +45,43 @@ let answerchoicesEl = document.getElementById("multiple-choice");
 let submitbtnEl = document.getElementById("submit-initials");
 let startbtnEl = document.getElementById("start-button");
 let initialsEl = document.getElementById("initials");
+let quizresultsEl = document.getElementById("quiz-results");
+let startPageEl = document.getElementById("start-page");
 
 function setTime() {
-    // Sets interval in variable
-    let timerInterval = setInterval(function(){
+    // Update time
         gameTime--;
         timerEl.textContent = gameTime + " until game is over!";
 
-        if(gameTime === 0) {
-            //Stops the timer execution
-            clearInterval(timerInterval);
-            // Calls function to create and append input span
-            finalScore();
+        if(gameTime <= 0) {
+            // Finish Quiz
+            finishQuiz();
         }
-    }, 1000);
 }
 
+function finishQuiz () {
+    //TBD
+}
+function beginQuiz () {
+    // Hide the start page
+    startPageEl.setAttribute("class", "hidden");
+
+    // Unhide quiz div
+    quizEl.removeAttribute("class");
+
+    //Starting timer
+    timerId = setInterval(setTime, 1000);
+
+    //Showtime now
+    timerEl.textContent = gameTime;
+
+}
 function finalScore() {
-    
+
 }
 
 for(var i=0; i < questions.length; i++){
     var response = (questions[i]);
 }
 
-startBtn.addEventListener("click", setTime());
+startbtnEl.onclick = beginQuiz;

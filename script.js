@@ -32,9 +32,9 @@ let questions = [
 ];
 
 // Some of the global variables
-let questionindex = ;
-let gametime = 100;
-let timerid = ;
+let questionIndex = ;
+let gameTime = 100;
+let timerId = ;
 let startBtn = document.querySelector("#start-button");
 
 
@@ -46,8 +46,27 @@ let submitbtnEl = document.getElementById("submit-initials");
 let startbtnEl = document.getElementById("start-button");
 let initialsEl = document.getElementById("initials");
 
+function setTime() {
+    // Sets interval in variable
+    let timerInterval = setInterval(function(){
+        gameTime--;
+        timerEl.textContent = gameTime + " until game is over!";
+
+        if(gameTime === 0) {
+            //Stops the timer execution
+            clearInterval(timerInterval);
+            // Calls function to create and append input span
+            finalScore();
+        }
+    }, 1000);
+}
+
+function finalScore() {
+    
+}
+
 for(var i=0; i < questions.length; i++){
     var response = (questions[i]);
 }
 
-startBtn.addEventListener("click", )
+startBtn.addEventListener("click", setTime());

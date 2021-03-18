@@ -68,3 +68,8 @@ a:hover {
     color: teal;
     border-top: 2px solid brown;
 }
+
+.quizstyle {
+    text-align: center;
+    display: block;
+}
